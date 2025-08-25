@@ -1,0 +1,97 @@
+VIN NUMBER      : MD629120000000000
+TEST STATUS     : NOK
+DATE            : 2025-08-19 18:00:35
+API Request:
+http://10.121.2.107:3000/vehicles/flashFile/prd/MD629120000000000
+API Response:
+
+{
+    "statusCode": 100,
+    "errorMessage": "",
+    "data": {
+        "vin": "MD629120000000000",
+        "modules": [
+            {
+                "module": "VCU",
+                "flashfilename": "KE163760_05.hex",
+                "configs": [
+                    {
+                        "refname": "VCU_SKU_WRITE",
+                        "messages": [
+                            {
+                                "refname": "SKU_WRITE",
+                                "txbytes": "KE190610"
+                            }
+                        ]
+                    },
+                    {
+                        "refname": "VCU_CVN_READ",
+                        "messages": [
+                            {
+                                "refname": "CVN_READ",
+                                "txbytes": "DA3C"
+                            }
+                        ]
+                    },
+                    {
+                        "refname": "VCU_CALID_READ",
+                        "messages": [
+                            {
+                                "refname": "CALID_READ",
+                                "txbytes": "000000"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "module": "IPC",
+                "configs": [
+                    {
+                        "refname": "IPC_TPMSFR_WRITE",
+                        "messages": [
+                            {
+                                "refname": "IPC_TPMSFR_WRITE",
+                                "partslno": "0000N71111700321752D225AA03800411C0638091DDDD",
+                                "txbytes": "C0638091DDDD"
+                            }
+                        ]
+                    },
+                    {
+                        "refname": "IPC_TPMSRR_WRITE",
+                        "messages": [
+                            {
+                                "refname": "IPC_TPMSRR_WRITE",
+                                "partslno": "0000N71111700321752U225AA02100770C06380910000",
+                                "txbytes": "C06380910000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}Test_Sequence: API_CALL
+API_URL: http://10.121.2.107:3000/vehicles/flashFile/prd/MD629120000000000
+Front_MAC_ID: C06380910000
+Rear_MAC_ID: C0638091DDDD
+Status: Passed
+Cycle Time: 0.13 sec
+
+Test_Sequence: WRITE_TPMS_FRONT
+SocketCAN setup failed: The driver is not loaded
+No CAN interface found.
+Cycle Time: 0.18 sec
+
+Test_Sequence: WRITE_TPMS_FRONT
+SocketCAN setup failed: The driver is not loaded
+No CAN interface found.
+Cycle Time: 0.23 sec
+
+Test_Sequence: WRITE_TPMS_FRONT
+SocketCAN setup failed: The driver is not loaded
+No CAN interface found.
+Cycle Time: 0.27 sec
+
+START CYCLE TIME: 2025-08-19 18:00:29
+TOTAL CYCLE TIME: 2025-08-19 18:00:35
